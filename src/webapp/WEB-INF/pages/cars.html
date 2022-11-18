@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Model</th>
+        <th>Serial</th>
+        <th>Price</th>
+    </tr>
+
+    <tr th:each="car : ${carsList}">
+
+        <td th:text="${car.getModel()}"/>
+        <td th:text="${car.getSerial()}"/>
+        <td th:text="${car.getPrice()}"/>
+
+    </tr>
+
+</table>
+</body>
+</html>
+
